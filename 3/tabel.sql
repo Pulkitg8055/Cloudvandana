@@ -10,11 +10,15 @@ CREATE TABLE TestTable(
 	Country Varchar(20)
 	);
 
-ALTER TABLE TestTable ADD Phone_Number AFTER Last_Name;
+ALTER TABLE TestTable 
+ADD Phone_Number int
+AFTER Last_Name;
 
 INSERT INTO TestTable values 
-	(1, John, Snow, 12423431 ,  South, Stark ),
-	(2, Denerys, Targerian, 131412312,  West, Westeros),
-	(3, Dory, Fish, 13414123 , Atlantis, Ocean),
-	(4, Arthur, Morgan, 13413113, Blackwater, US),
-	(5, Johnny, Silverhand, 14131234, Night ,City, Japan);
+	(1, "John", "Snow", 12423431 ,  "South", "Stark" ),
+	(2, "Denerys", "Targerian", 131412312,  "West", "Westeros"),
+	(3, "Dory", "Fish", 13414123 , "Atlantis", "Ocean"),
+	(4, "Arthur", "Morgan", 13413113, "Blackwater", "US"),
+	(5, "Johnny", "Silverhand", 14131234, "Night City", "Japan");
+    
+SELECT * FROM TestTable;
